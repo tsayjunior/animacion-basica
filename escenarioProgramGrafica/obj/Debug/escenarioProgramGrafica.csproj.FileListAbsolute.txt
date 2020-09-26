@@ -1,0 +1,11 @@
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\obj\Debug\escenarioProgramGrafica.csproj.CoreCompileInputs.cache
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\obj\Debug\escenarioProgramGrafica.csproj.CopyComplete
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\escenarioProgramGrafica.exe.config
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\obj\Debug\escenarioProgramGrafica.exe
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\obj\Debug\escenarioProgramGrafica.pdb
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\escenarioProgramGrafica.exe
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\escenarioProgramGrafica.pdb
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\OpenTK.dll
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\OpenTK.pdb
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\OpenTK.xml
+C:\Users\Junior Javier\source\repos\escenarioProgramGrafica\escenarioProgramGrafica\obj\Debug\escenarioProgramGrafica.csprojAssemblyReference.cache
