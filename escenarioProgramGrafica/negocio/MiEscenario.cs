@@ -55,27 +55,20 @@ namespace escenarioProgramGrafica.negocio
             inicializar(0);
             getterEscena(0).trasladar2(5.2f, 0, 0);
         }
-        
-        float time;
+
+        //float time;
         int aux;
-        public void moverEscena1(int a, float segundos)
+        public void moverEscena1()
         {
-            time++;
-            if (time > segundos * 30)
-                {
-                time = 0;
-                aux++;
-                System.Console.WriteLine(aux);
-                getterEscena(a).trasladar2(-0.01f, 0, 0);
+            aux++;
+            getterEscena(0).trasladar2(-0.01f, 0, 0);
                 if (aux > 950)
                 {
                     getterEscena(0).Destroys();
                     borrarEscena(0);
                     escena1();
-                    aux = 0;
-                }
-            }
-            dibujarEscenaNumero(a + 1);
-        }
+                     aux = 0;
+                }         
+        }    
     }
 }

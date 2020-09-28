@@ -1,6 +1,7 @@
 ﻿using OpenTK.Platform.Windows;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,7 @@ namespace escenarioProgramGrafica.negocio
     class escenario
     {
         List<objetos> partes = new List<objetos>();
-        int i = 1;
-        int time;
+        
         List<escenario> escenas = new List<escenario>();
         public void setterParte(objetos part)
         {
@@ -85,8 +85,12 @@ namespace escenarioProgramGrafica.negocio
         {
             escenas[i - 1].dibujar();
         }
+        
+        int i = 1;
+        int time;
         public void dibujarEscenas(float segundos)//dibuja todas las escenas segun el tiempo en segundo le demos
         {
+
             time++;
             if (time > segundos * 30)
             {
@@ -110,6 +114,6 @@ namespace escenarioProgramGrafica.negocio
             return getterEscena(a).getterParte(b);
         }
        
-    
+        
     }
 }

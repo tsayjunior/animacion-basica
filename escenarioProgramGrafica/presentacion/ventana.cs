@@ -5,6 +5,7 @@ using OpenTK.Graphics.OpenGL4;
 using OpenTK.Input;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -14,12 +15,14 @@ namespace escenarioProgramGrafica.presentacion
 {
     class ventana : GameWindow
     {
-        
+
         miEscenario escenario;
         escenasDelPerro escenasDelPerro;
+
+        Stopwatch timeMeasure = new Stopwatch();//con esto claculo el tiempo
         public ventana(int width, int height, string title) : base(width, height, GraphicsMode.Default, title)
         {
-
+            timeMeasure.Start();//empieza a contar el tiempo
         }
         protected override void OnLoad(EventArgs e)
         {
@@ -31,15 +34,27 @@ namespace escenarioProgramGrafica.presentacion
 
             base.OnLoad(e);
         }
+        int i = 1;
         protected override void OnRenderFrame(FrameEventArgs e)
         {
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
+            TimeSpan a = new TimeSpan(0, 0, 0, 0, (int)timeMeasure.ElapsedMilliseconds);
+            int tiempoFijo = 50;
+            if (a.Milliseconds >= tiempoFijo)//cada 50 milisegundo se movera el escenario, y cambiara de escenas, esta puesto 
+            {                           //en milisegundos, cada 1 segundo es 1000 milisegundos, para cambiar el tiempo
+                                        //solo hay que aumentarle a la variable tiempo fijo
+                timeMeasure.Restart();
+                i++;
+                if (i > 8)
+                {
+                    i = 1;
+                }
+                escenario.moverEscena1();
+            }
             escenario.dibujar();
-            escenario.moverEscena1(0, 0.1f);
-            //Thread.Sleep(500);
-            escenasDelPerro.dibujarEscenas(0.1f);//le pasamos el tiempo en segundo
-            //escenario2.dibujarEscenaNumero(2);
+            escenario.dibujarEscenaNumero(1);
+            escenasDelPerro.dibujarEscenaNumero(i);
 
             Context.SwapBuffers();
             base.OnRenderFrame(e);
