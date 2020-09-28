@@ -39,11 +39,12 @@ namespace escenarioProgramGrafica.presentacion
         {
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-            TimeSpan a = new TimeSpan(0, 0, 0, 0, (int)timeMeasure.ElapsedMilliseconds);
+            //TimeSpan a = new TimeSpan(0, 0, 0, 0, (int)timeMeasure.ElapsedMilliseconds);
             int tiempoFijo = 50;
-            if (a.Milliseconds >= tiempoFijo)//cada 50 milisegundo se movera el escenario, y cambiara de escenas, esta puesto 
+            if (timeMeasure.ElapsedMilliseconds >= tiempoFijo)//cada 50 milisegundo se movera el escenario, y cambiara de escenas, esta puesto 
             {                           //en milisegundos, cada 1 segundo es 1000 milisegundos, para cambiar el tiempo
                                         //solo hay que aumentarle a la variable tiempo fijo
+                Console.WriteLine(timeMeasure.ElapsedMilliseconds);
                 timeMeasure.Restart();
                 i++;
                 if (i > 8)
